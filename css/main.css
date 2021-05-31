@@ -1,15 +1,73 @@
 textarea {
-    width: 80%;
-    height: 10vh;
+    box-sizing: border-box;
     display: block;
-    margin: 1rem;
-    padding: 1rem;
+    width: 100%;
+    font-family: 'Kalam', cursive;
+    min-height: 20vh;
+    margin-top: 4%;
+}
+
+main {
+    margin: 4%;
+}
+
+body {
+    margin: 0px;
+    font-family: Ink Free;
+    font-weight: bold;
 }
 
 #outputArea {
-    border: 1px black solid;
-    height: 10vh;
+    box-sizing: border-box;
     display: block;
-    margin: 1rem;
+    width: 100%;
+    min-height: 20vh;
+    margin-top: 4%;
+    border: 1px solid black;
+}
+
+p {
+    font-size: 1.5rem;
+    margin: 0;
+    text-decoration: underline;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     padding: 1rem;
+    text-align: center;
+    background-color: #f1e150;
+}
+
+h1 {
+    background-color: #f1e150;
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
+
+button {
+    background-color: #f1e150;;
+    border: none;
+    margin: 1rem 0rem;
+    padding: 1rem 2rem;
+    font-family: 'Kalam', cursive;
+    font-size: large;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.center {
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }

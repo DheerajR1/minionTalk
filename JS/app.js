@@ -1,10 +1,11 @@
 var rawInputBtn = document.querySelector("#btn-userInput");
 var inputText = document.querySelector("#txt-Input");
 var outputText = document.querySelector("#outputArea");
-var serverUrl = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+var serverUrl = "https://api.funtranslations.com/translate/yoda.json";
 
 function getTranslation(text) {
-    return serverUrl + "?" + "text=" + Text;
+    console.log(serverUrl + "?" + "text=" + text);
+    return serverUrl + "?" + "text=" + text;
 }
 
 function errorHandler(error) {
@@ -14,10 +15,12 @@ function errorHandler(error) {
 
 function clickHandler() {
     var text = inputText.value;
-    fetch(getTranslation(inputText))
+    console.log(text);
+    fetch(getTranslation(text))
     .then(response => response.json())
     .then(json => {
         var translatedText = json.contents.translated;
+        console.log({json});
         outputText.innerText = translatedText;
     })
     .catch(errorHandler) 

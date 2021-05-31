@@ -1,7 +1,7 @@
 var rawInputBtn = document.querySelector("#btn-userInput");
 var inputText = document.querySelector("#txt-Input");
 var outputText = document.querySelector("#outputArea");
-var serverUrl = "https://api.funtranslations.com/translate/yoda.json";
+var serverUrl = "https://api.funtranslations.com/translate/minion.json";
 
 function getTranslation(text) {
     console.log(serverUrl + "?" + "text=" + text);
@@ -10,7 +10,6 @@ function getTranslation(text) {
 
 function errorHandler(error) {
     console.error("error occured:", error);
-    alert("error occured:", error);
 }
 
 function clickHandler() {
@@ -19,6 +18,8 @@ function clickHandler() {
     fetch(getTranslation(text))
     .then(response => response.json())
     .then(json => {
+        if (json.error.message !== undefined) 
+            alert(json.error.message);
         var translatedText = json.contents.translated;
         console.log({json});
         outputText.innerText = translatedText;

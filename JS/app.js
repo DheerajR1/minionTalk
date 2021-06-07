@@ -18,7 +18,7 @@ function clickHandler() {
     fetch(getTranslation(text))
     .then(response => response.json())
     .then(json => {
-        if (json.error.message !== undefined) 
+        if (json.error !== undefined) 
             alert(json.error.message);
         var translatedText = json.contents.translated;
         console.log({json});

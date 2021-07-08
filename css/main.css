@@ -15,6 +15,7 @@ body {
     margin: 0px;
     font-family: 'Apple Chancery', cursive;
     font-weight: bold;
+    background-image: url("../images/minion.jpg");
 }
 
 #outputArea {
